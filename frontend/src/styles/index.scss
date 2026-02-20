@@ -1,0 +1,110 @@
+:root {
+  --bg-color: #f5f7fa;
+  --bg-color-page: #f5f7fa;
+  --text-color-primary: #303133;
+  --text-color-regular: #606266;
+  --text-color-secondary: #909399;
+  --border-color: #dcdfe6;
+  --border-color-light: #e4e7ed;
+  --fill-color: #f0f2f5;
+  --fill-color-light: #f5f7fa;
+  --box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  --header-bg: #ffffff;
+  --sidebar-bg: linear-gradient(180deg, #1a1f36 0%, #2d3555 100%);
+  --card-bg: #ffffff;
+  --table-bg: #ffffff;
+  --table-row-hover: #f5f7fa;
+  --input-bg: #ffffff;
+  --modal-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #141414;
+  --bg-color-page: #0a0a0a;
+  --text-color-primary: #e5eaf3;
+  --text-color-regular: #cfd3dc;
+  --text-color-secondary: #a3a6ad;
+  --border-color: #4c4d4f;
+  --border-color-light: #414243;
+  --fill-color: #303030;
+  --fill-color-light: #262727;
+  --box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.3);
+  --header-bg: #1d1e1f;
+  --sidebar-bg: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  --card-bg: #1d1e1f;
+  --table-bg: #1d1e1f;
+  --table-row-hover: #262727;
+  --input-bg: #1d1e1f;
+  --modal-bg: #1d1e1f;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.el-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color-light);
+}
+
+.el-table {
+  --el-table-bg-color: var(--table-bg);
+  --el-table-tr-bg-color: var(--table-bg);
+  --el-table-row-hover-bg-color: var(--table-row-hover);
+  --el-table-header-bg-color: var(--fill-color);
+}
+
+.el-input__wrapper,
+.el-select__wrapper,
+.el-textarea__inner {
+  background-color: var(--input-bg) !important;
+}
+
+.el-dialog,
+.el-drawer {
+  background-color: var(--modal-bg) !important;
+}
+
+.el-menu {
+  background-color: transparent !important;
+}
+
+.el-breadcrumb__inner,
+.el-breadcrumb__separator {
+  color: var(--text-color-regular);
+}
+
+.el-dropdown-menu {
+  background-color: var(--card-bg) !important;
+}
+
+.el-dropdown-menu__item {
+  color: var(--text-color-regular);
+  
+  &:hover {
+    background-color: var(--fill-color);
+  }
+}
+
+.el-form-item__label {
+  color: var(--text-color-regular);
+}
+
+.el-descriptions {
+  --el-descriptions-item-bordered-label-background: var(--fill-color);
+}
+
+.el-pagination {
+  --el-pagination-bg-color: var(--card-bg);
+  --el-pagination-button-bg-color: var(--card-bg);
+}
+
+.el-message-box {
+  background-color: var(--modal-bg) !important;
+}
